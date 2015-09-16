@@ -3,11 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-
-
-
-
-
-	<bean id="person" class="com.demo.Person"></bean>
+	<bean id="person" class="com.demo.Person">
+		<constructor-arg value="1" type="int" name="id"></constructor-arg>
+		<constructor-arg value="Mary" type="String" name="name"></constructor-arg>
+	</bean>
 </beans>
