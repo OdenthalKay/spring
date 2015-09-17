@@ -5,6 +5,9 @@ import org.hibernate.SessionFactory;
 public class HibernateDaoImpl {
 	private SessionFactory sessionFactory;
 
+	public HibernateDaoImpl() {
+	}
+
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
@@ -12,7 +15,5 @@ public class HibernateDaoImpl {
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
-	
-	
 
 }

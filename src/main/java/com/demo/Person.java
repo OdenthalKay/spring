@@ -1,9 +1,22 @@
 package com.demo;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+@Entity(name = "PERSON")
 public class Person {
+	@Id
 	private int id;
+	@Column(name = "NAME")
 	private String name;
+	@Column(name = "TAX_ID")
 	private int taxId;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "ADDRESS_ID")
 	private Address address;
 
 	public Person(int id, String name, int taxId, Address address) {
@@ -24,7 +37,6 @@ public class Person {
 	public void speak() {
 		System.out.println("hello world!");
 	}
-	
 
 	public int getId() {
 		return id;
